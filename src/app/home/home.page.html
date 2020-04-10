@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="">
+    <ion-title slot="secondary"> E-coms</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon style="margin-right:20px; font-size:22px;" name="cart-sharp"></ion-icon>
+      <ion-icon name="menu-sharp" style="font-size: 22px;"></ion-icon>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-horizontal" [fullscreen]="true">
+  <ion-segment class="ion-no-border" mode="md" scrollable value="chairs"
+    (ionChange)="segmentChanged($event.target.value)">
+    <ion-segment-button value="chairs">
+      <ion-label> Chairs</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="tables">
+      <ion-label>Tables</ion-label>  
+    </ion-segment-button>
+    <ion-segment-button value="sofa">
+      <ion-label>Sofa</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="beds">
+      <ion-label>Beds</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="wardrobes">
+      <ion-label>Wardrobes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="shelf">
+      <ion-label>Shelf</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="ion-padding-top" *ngIf="seg == 'chairs'">
+    <span>20 products</span>
+    <span class="ion-float-right" style="font-weight: 700;">
+      <span>popular </span>
+      <ion-icon name="chevron-down-sharp"></ion-icon>
+    </span>
+    <ion-grid mode="ios" class="ion-padding-vertical">
+      <ion-row class="ion-justify-content-around">
+        <ion-card class="ion-no-margin" *ngFor="let item of chairProducts" (click)="productDetail(item)">
+          <div
+            [ngStyle]="{'background': 'url('+ item.image +' )', 'background-size':'contain','background-repeat':'no-repeat', 'background-position':'center'}"
+            style="height:100px;"></div>
+            <!-- <ion-thumbnail style="height:100px; width:10%;">
+                <ion-img [src]="item.image"style="height:100px; width:10%;" ></ion-img>
+              </ion-thumbnail> -->
+          <ion-card-header class="c-title">
+            <ion-card-title style="font-size: 18px;">{{item.title}}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content class="ellispes-text c-content">
+            {{item.detail}}
+          </ion-card-content>
+          <div style="padding-top: 5px;">
+            <span style="font-size: large; font-weight: 700; padding-left: 15px ;"> {{ item.price | currency:'USD'}} </span>
+            <span class="ion-float-right add-to-cart">
+              <ion-icon style="font-size: 28px; margin: 5px; color: #fff;" name="cart-sharp"></ion-icon>
+            </span>
+          </div>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div *ngIf="seg == 'tables'">
+    <h3> TABLES WORKING</h3>
+
+  </div>
+  <div *ngIf="seg == 'sofa'">
+    <h3> SOFA WORKING</h3>
+
+  </div>
+  <div *ngIf="seg == 'beds'">
+    <h3> BEDS WORKING</h3>
+
+  </div>
+  <div *ngIf="seg == 'wardrobes'">
+    <h3> WARDROES WORKING</h3>
+
+  </div>
+  <div *ngIf="seg == 'shelf'">
+    <h3> SHELF WORKING</h3>
+
+  </div>
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar style="background: #ffffff;">
+        <!-- change ion-back-button settings later! -->
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon style="margin-right:20px; font-size:22px;" name="cart-sharp"></ion-icon>
+                <ion-icon name="menu-sharp" style="font-size: 22px;"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="" [fullscreen]="true">
+    <div [ngStyle]="{'background': 'url('+ productItem.img +' )', 'background-size':'cover','background-repeat':'no-repeat', 'background-position':'center'}"
+        style="height:350px;"></div>
+
+    <div style="padding:30px">
+        <ion-grid class="ion-no-padding" style="padding-bottom:20px;">
+            <ion-row>
+                <ion-col>
+                    <span style="font-size: 24px;font-weight: 600;">
+                        {{ productItem.price | currency:'USD'}}
+                    </span>
+                </ion-col>
+                <ion-col>
+                    <div class="ion-float-right">
+                        <input type="number" id="qty" class="input-qty" [(ngModel)]="qauntity">
+                        <span> pcs </span>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!-- <div style="color:#C7C7C7;"> -->
+            <h3 style="margin: 0; font-weight: 700;">{{productItem.name}}</h3>
+            <small class="faint-color">A modern transition</small>
+            <p style=" word-spacing: 4px;" class="faint-color">
+                {{productItem.info}}
+            </p>
+        <!-- </div> -->
+        <ion-grid class="ion-no-padding">
+            <ion-row>
+                <ion-col>
+                    <h6 style="font-weight: 700;"> Size</h6>
+                    <span class="small-text faint-color">
+                        H:80cm
+                        W:50cm
+                        D:40cm
+                    </span>
+                </ion-col>
+                <ion-col>
+                    <h6 style="font-weight: 700;">Treament</h6>
+                    <span class="small-text faint-color">Oak oiled, weaved</span>
+                    <!-- <h6 style="font-weight: 700;">Quantity</h6>
+               <input type="number" value="1" class="input-qty"> pcs -->
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <ion-footer class="ion-no-border">
+        <ion-toolbar class="footer ion-text-center" (click)="addToCart()">
+            <span style="font-weight: 700;">Add to Cart</span>
+        </ion-toolbar>
+    </ion-footer>
+</ion-content>

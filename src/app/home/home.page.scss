@@ -1,0 +1,26 @@
+ion-header{
+  --ion-padding-horizontal:0 10px;
+}
+ion-segment-button{
+  --background: #F5F5F5;
+  --color:#C7C7C9;
+  --color-checked:#000000;
+  --color-hover	:#000000;
+  font-weight: 700;
+}
+ion-card{
+  --background:#ffffff;
+    height: 250px;
+    width: 45%;
+    margin-bottom: 20px;
+}
+.c-title{
+  padding:10px 15px 5px;
+  height: 45px;
+} .c-content{
+  padding:5px 15px 10px;
+  height: 60;
+  font-size:16px;
+}.add-to-cart{
+  background: #FDD07A;
+}
