@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductDetailsPage implements OnInit {
   public image = 'assets/chair-2.jpg'
-  public quantity = '';
+  public quantity;
   public productItem = {
     name:'',
     info: '',
