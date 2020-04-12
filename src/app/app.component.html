@@ -1,41 +1,45 @@
 <ion-app>
-    <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-        <ion-header>
-          <ion-toolbar class="ion-padding">
-              <ion-avatar slot="start">
-                  <img src="https://cdn.dribbble.com/users/1140208/screenshots/9806422/markmojisv3_1x.gif">
-                </ion-avatar>
-                <ion-label class="ion-padding-horizontal">
-                  <strong>Oluwatobi Peter</strong>
-                </ion-label>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-list>
-            <ion-item>
-                <ion-icon name="cart-outline"></ion-icon>
-                <ion-label class="ion-padding-horizontal"> Shopping Cart</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-icon name="bookmark-outline"></ion-icon>
-                <ion-label class="ion-padding-horizontal"> Wishlist</ion-label>
-            </ion-item>
-            <ion-item-group class="ion-padding-vertical">
-                <ion-item-divider class="ion-padding-vertical">
-                  <ion-label>Connect</ion-label>
-                </ion-item-divider>
-              
-                <ion-item [href]="twitter">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  <ion-label class="ion-padding-horizontal">Follow on Twitter</ion-label>
-                </ion-item>
-                <ion-item [href]="linkedin">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  <ion-label class="ion-padding-horizontal">Connect on Linkedin</ion-label>
-                </ion-item>
-              </ion-item-group>
-          </ion-list>
-        </ion-content>
-      </ion-menu>
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar class="ion-padding">
+        <ion-avatar slot="start">
+          <img src="https://cdn.dribbble.com/users/1140208/screenshots/9806422/markmojisv3_1x.gif">
+        </ion-avatar>
+        <ion-label class="ion-padding-horizontal">
+          <strong>Oluwatobi Peter</strong>
+        </ion-label>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label class="ion-padding-horizontal"> Shopping Cart</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bookmark-outline"></ion-icon>
+          <ion-label class="ion-padding-horizontal"> Wishlist</ion-label>
+        </ion-item>
+        <ion-item-group class="ion-padding-vertical">
+          <ion-item-divider class="ion-padding-vertical">
+            <ion-label>Connect</ion-label>
+          </ion-item-divider>
+
+          <ion-item [href]="twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-label class="ion-padding-horizontal">Follow on Twitter</ion-label>
+          </ion-item>
+          <ion-item [href]="github">
+          <ion-icon name="logo-github"></ion-icon>
+          <ion-label class="ion-padding-horizontal">Follow on Github</ion-label>
+          </ion-item>
+          <ion-item [href]="linkedin">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-label class="ion-padding-horizontal">Connect on Linkedin</ion-label>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

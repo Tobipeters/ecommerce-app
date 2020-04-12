@@ -12,9 +12,8 @@ import { MenuController } from '@ionic/angular';
 })
 export class AppComponent {
 
-  public whatsapp = 'https://api.whatsapp.com/send?phone=+2348167764664';
   public twitter = 'https://twitter.com/Peters_tsticks';
-  public github = '';
+  public github = 'https://github.com/Tobipeters/ecommerce-app.git';
   public linkedin = 'https://www.linkedin.com/in/oluwatobi-taiwo-b19860177';
 
 
