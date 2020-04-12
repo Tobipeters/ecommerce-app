@@ -23,7 +23,7 @@ export class ProductDetailsPage implements OnInit {
     this.productItem.info = this.activatedRoute.snapshot.paramMap.get('detail');
     this.productItem.img = this.activatedRoute.snapshot.paramMap.get('img');
     this.productItem.price = this.activatedRoute.snapshot.paramMap.get('price');
-    console.log(this.productItem)
+    // console.log(this.productItem)
   }
 
   addToCart = () =>{

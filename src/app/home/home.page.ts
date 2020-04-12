@@ -26,7 +26,6 @@ export class HomePage {
 
   segmentChanged(ev: any) {
      this.seg = ev;
-    console.log(this.seg);
   }
 
   productDetail = item =>{
@@ -34,7 +33,7 @@ export class HomePage {
     const detail = item.detail;
     const img = item.image;
     const price = item.price;
-    console.log(item)
+    // console.log(item)
     this.route.navigate(['/product-details', {title,detail,img,price}]);
   }
 

@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<ion-header class="ion-no-border" mode="md">
     <ion-toolbar style="background: #ffffff;">
         <!-- change ion-back-button settings later! -->
         <ion-buttons slot="start">
@@ -7,7 +7,7 @@
         <ion-buttons slot="end">
             <ion-button>
                 <ion-icon style="margin-right:20px; font-size:22px;" name="cart-sharp"></ion-icon>
-                <ion-icon name="menu-sharp" style="font-size: 22px;"></ion-icon>
+                <ion-menu-button></ion-menu-button>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
@@ -27,7 +27,7 @@
                 </ion-col>
                 <ion-col>
                     <div class="ion-float-right">
-                        <input type="number" id="qty" class="input-qty" [(ngModel)]="qauntity">
+                        <input type="number" id="qty" class="input-qty" [(ngModel)]="quantity">
                         <span> pcs </span>
                     </div>
                 </ion-col>
